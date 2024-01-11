@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>form</title>
+<script>
+function validate()
+{
+var a=document.getElementById("pass").value;
+var b=document.getElementById("cpass").value;
+var phone=document.forms["myfrm"]["mob"];
+if(phone.value.length!=10)
+{
+alert("10 digit mobile number is required");
+return false;
+}
+
+else if(a!=b)
+{
+alert("password are not matching");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body bgcolor=skyblue>
+<table border=1 align=center bgcolor="yellow">
+<form name=myfrm onsubmit="return validate()" method="post">
+<th colspan=2>STUDENT DETAILS</th>
+<tr>
+<td>First Name</td>
+<td><input type=text name=t1 required></td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td><input type=text name=t2 required></td>
+</tr>
+<tr>
+<td>Father's Name</td>
+<td><input type=text name=t3 required></td>
+</tr>
+<tr>
+<td>Address</td>
+<td><textarea rows=5 name=t4 required></textarea></td>
+</tr>
+<tr>
+<td>Email Id</td>
+<td><input type=email name=t5 required></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type=password name=t6 required id="pass"></td>
+</tr>
+<tr>
+<td>Confirm Password</td>
+<td><input type=password name=t7 required id="cpass"></td>
+</tr>
+<tr>
+<td>Mobile No</td>
+<td><input type=number name=t8 id="mob" required></td>
+</tr>
+<tr>
+<td>Country</td>
+<td><input type=radio name=country required value="india">India<br>
+<input type=radio name=country required value="other">Other</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td><input type=radio name=gen required value="male">Male<br>
+<input type=radio name=gen required value="female">Female<br>
+<input type=radio name=gen required value="other">Other</td>
+</tr>
+<tr>
+<td>Highest Qualification</td>
+<td><select name="HQual">
+<option>Undergraduate</option>
+<option>Graduate</option>
+<option>Postgraduate</option>
+<option>Doctrate</option>
+</select></td>
+</tr>
+<tr>
+<td colspan=2 align=center><input type=submit value="OK" ></td>
+</tr>
+</form>
+</table>
+</body>
+</html>
+
+
